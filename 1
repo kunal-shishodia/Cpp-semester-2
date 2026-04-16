@@ -1,0 +1,18 @@
+// Write a C++ program that declares one global variable, one local variable inside main(), dynamically allocates one integer using new, and prints their addresses.
+
+#include <iostream>
+using namespace std;
+
+int globalVar = 10;
+
+int main() {
+    int localVar = 20;
+    int* heapVar = new int(30);
+
+    cout << &globalVar << endl;
+    cout << &localVar << endl;
+    cout << heapVar << endl;
+
+    delete heapVar;
+    return 0;
+}
